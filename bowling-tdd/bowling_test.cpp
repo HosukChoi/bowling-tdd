@@ -33,3 +33,8 @@ TEST_F(BowlingGameTest, OneStrike) {
     for (int i = 0; i < 16; i++) game.roll(0);
     EXPECT_EQ(24, game.score());
 }
+
+TEST_F(BowlingGameTest, PerfectGame) {
+    for (int i = 0; i < 12; i++) game.roll(10);
+    EXPECT_EQ(300, game.score());
+}
