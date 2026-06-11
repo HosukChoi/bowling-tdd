@@ -5,5 +5,9 @@ void Game::roll(int pins) {
 }
 
 int Game::score() {
-    return 0;
+    int total = 0;
+    for (int i = 0; i < 20; i++) {
+        total += rolls[i];
+    }
+    return total;
 }
