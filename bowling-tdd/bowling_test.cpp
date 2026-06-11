@@ -26,3 +26,10 @@ TEST_F(BowlingGameTest, OneSpare) {
     for (int i = 0; i < 17; i++) game.roll(0);
     EXPECT_EQ(16, game.score());
 }
+
+TEST_F(BowlingGameTest, OneStrike) {
+    game.roll(10); // strike
+    game.roll(3); game.roll(4);
+    for (int i = 0; i < 16; i++) game.roll(0);
+    EXPECT_EQ(24, game.score());
+}
